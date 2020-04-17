@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/491. Increasing Sequences.js",
+            "program": "${workspaceFolder}/646. Maximum Length of Pair Chain.js",
             "skipFiles": [
                 "<node_internals>/**"
             ]
