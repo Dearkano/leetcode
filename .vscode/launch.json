@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/646. Maximum Length of Pair Chain.js",
+            "program": "${workspaceFolder}/980. Unique Paths III.js",
             "skipFiles": [
                 "<node_internals>/**"
             ]
