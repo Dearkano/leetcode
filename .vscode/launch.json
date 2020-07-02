@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/980. Unique Paths III.js",
+            "program": "${workspaceFolder}/148.Sort List",
             "skipFiles": [
                 "<node_internals>/**"
             ]
