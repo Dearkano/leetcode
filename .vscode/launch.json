@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/148.Sort List",
+            "program": "${workspaceFolder}/287. Find the Duplicate Number",
             "skipFiles": [
                 "<node_internals>/**"
             ]
