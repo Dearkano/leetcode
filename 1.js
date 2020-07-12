@@ -15,4 +15,4 @@
     const params2 = { name: "lcc1" };
     test2(params2);
     console.log(JSON.stringify(params2));
-})()
+})() 
