@@ -14,3 +14,6 @@ const maximumSum = function (arr) {
   }
   return ans;
 };
+
+maximumSum([1,2, -2, 3]);
+maximumSum([2,3,1,4])
