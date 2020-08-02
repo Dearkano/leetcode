@@ -16,22 +16,22 @@
 //   let min = Infinity;
 //   const levelTravsal = (siblings) => {
 //     if (siblings.length === 0) return;
-//     const childs = [];
+//     const children = [];
 //     for (const node of siblings) {
 //       if (node.col < min) min = node.col;
 //       if (!ans[node.col]) ans[node.col] = [];
 //       ans[node.col].push(node.val);
 //       if (node.left) {
 //         node.left.col = node.col - 1;
-//         childs.push(node.left);
+//         children.push(node.left);
 //       }
 //       if (node.right) {
 //         node.right.col = node.col + 1;
-//         childs.push(node.right);
+//         children.push(node.right);
 //       }
 //     }
-//     if (childs.length === 0) return;
-//     levelTravsal(childs);
+//     if (children.length === 0) return;
+//     levelTravsal(children);
 //   };
 //   root.col = 0;
 //   levelTravsal([root]);

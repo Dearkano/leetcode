@@ -37,16 +37,16 @@ const connect = (root) => {
   if (!root) return root;
   const levelTravesal = (siblings) => {
     if (siblings.length === 0) return;
-    const childs = [];
+    const children = [];
     for (let i = 0; i < siblings.length; i++) {
       const node = siblings[i];
       if (i !== siblings.length - 1) {
         node.next = siblings[i + 1];
       }
-      if (node.left) childs.push(node.left);
-      if (node.right) childs.push(node.right);
+      if (node.left) children.push(node.left);
+      if (node.right) children.push(node.right);
     }
-    levelTravesal(childs);
+    levelTravesal(children);
   };
   levelTravesal([root]);
   return root;

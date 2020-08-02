@@ -15,15 +15,15 @@ var levelOrder = function (root) {
   const ans = [];
   const _levelOrder = (siblings) => {
     if (siblings.length === 0) return;
-    const childs = [];
+    const children = [];
     ans[ans.length] = [];
     for (const node of siblings) {
       ans[ans.length - 1].push(node.val);
-      if (node.left) childs.push(node.left);
-      if (node.right) childs.push(node.right);
+      if (node.left) children.push(node.left);
+      if (node.right) children.push(node.right);
     }
-    if (childs.length === 0) return;
-    _levelOrder(childs);
+    if (children.length === 0) return;
+    _levelOrder(children);
   };
   _levelOrder([root]);
   return ans;

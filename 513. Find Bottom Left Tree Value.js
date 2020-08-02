@@ -8,35 +8,23 @@
  */
 /**
  * @param {TreeNode} root
- * @return {number[]}
+ * @return {number}
  */
-var rightSideView = function (root) {
-  if (!root) return [];
-  const ans = [];
+var findBottomLeftValue = function (root) {
+  if (!root) return;
+  let ans = 0;
   const levelTraversal = (siblings) => {
-    if (siblings.length === 0) return;
     const children = [];
     for (const node of siblings) {
       if (node.left) children.push(node.left);
       if (node.right) children.push(node.right);
     }
-    if (children.length === 0) return;
-    ans.push(children[children.length - 1].val);
+    if (children.length === 0) {
+      ans = siblings[0].val;
+      return;
+    }
     levelTraversal(children);
   };
-  ans.push(root.val);
   levelTraversal([root]);
   return ans;
 };
-console.log(
-  rightSideView({
-    val: 1,
-    left: {
-      val: 2,
-      left: { val: 4 },
-    },
-    right: {
-      val: 3,
-    },
-  })
-);

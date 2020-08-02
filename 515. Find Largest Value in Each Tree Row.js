@@ -10,33 +10,23 @@
  * @param {TreeNode} root
  * @return {number[]}
  */
-var rightSideView = function (root) {
+var largestValues = function (root) {
   if (!root) return [];
-  const ans = [];
+  let ans = [];
   const levelTraversal = (siblings) => {
-    if (siblings.length === 0) return;
     const children = [];
+    let max = siblings[0].val;
     for (const node of siblings) {
+      if (max < node.val) max = node.val;
       if (node.left) children.push(node.left);
       if (node.right) children.push(node.right);
     }
-    if (children.length === 0) return;
-    ans.push(children[children.length - 1].val);
+    ans.push(max);
+    if (children.length === 0) {
+      return;
+    }
     levelTraversal(children);
   };
-  ans.push(root.val);
   levelTraversal([root]);
   return ans;
 };
-console.log(
-  rightSideView({
-    val: 1,
-    left: {
-      val: 2,
-      left: { val: 4 },
-    },
-    right: {
-      val: 3,
-    },
-  })
-);
