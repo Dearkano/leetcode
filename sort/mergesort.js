@@ -29,4 +29,4 @@ const mergeSort = (A) => {
   return A;
 };
 
-console.log(mergeSort([7,6,4,3,2,1,1,1,1,0]));
+console.log(mergeSort([7, 6, 4, 3, 2, 1, 1, 1, 1, 0]));
