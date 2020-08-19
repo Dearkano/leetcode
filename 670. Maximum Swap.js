@@ -17,7 +17,7 @@ var maximumSwap = function (num) {
         const temp = S[i];
         S[i] = S[bucket[j]];
         S[bucket[j]] = temp;
-        return Number(S.join(""));
+         return Number(S.join(""));
       }
     }
   }
