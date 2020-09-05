@@ -16,7 +16,7 @@ const mergeSort = (A) => {
       } else if (l2 > r2) {
         A[i] = temp[l1 - l];
         l1++;
-      } else if (temp[l1] < temp[l2]) {
+      } else if (temp[l1-l] < temp[l2-l]) {
         A[i] = temp[l1 - l];
         l1++;
       } else {
