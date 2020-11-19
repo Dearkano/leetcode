@@ -86,3 +86,12 @@ var decode = function (s) {
  * Your functions will be called as such:
  * decode(encode(strs));
  */
+function a() {
+  console.log(this);
+}
+a();
+let ans = 0;
+for (let i = 100; i >= 3; i--) {
+  ans += i * i - 1;
+}
+console.log(ans + 1);
